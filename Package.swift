@@ -8,7 +8,9 @@ let package = Package(
     products: [
         .executable(name: "Monkey", targets: ["Monkey"])
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "0.4.0"),
+    ],
     targets: [
         .target(
             name: "MonkeyCore",
@@ -17,7 +19,10 @@ let package = Package(
         ),
         .target(
             name: "Monkey",
-            dependencies: ["MonkeyCore"],
+            dependencies: [
+                "MonkeyCore",
+                .product(name: "ArgumentParser", package: "swift-argument-parser")
+            ],
             path: "Sources/Monkey"
         ),
         .testTarget(

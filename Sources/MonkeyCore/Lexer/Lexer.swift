@@ -4,13 +4,13 @@
 //  Created by Maiku Yamaguchi on 2021/06/07.
 //
 
-final class Lexer {
+public final class Lexer {
     let input: String
     var position: String.Index
     var readPosition: String.Index
     var character: Character?
 
-    init(input: String) {
+    public init(input: String) {
         self.input = input
         position = input.startIndex
         readPosition = input.startIndex
@@ -19,7 +19,7 @@ final class Lexer {
     }
 
 
-    func nextToken() -> Token {
+    public func nextToken() -> Token {
         let token: Token
         switch character {
         case "=":

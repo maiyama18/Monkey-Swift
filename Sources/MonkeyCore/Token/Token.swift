@@ -4,7 +4,7 @@
 //  Created by Maiku Yamaguchi on 2021/06/07.
 //
 
-enum Token {
+public enum Token {
     case illegal
     case eof
 

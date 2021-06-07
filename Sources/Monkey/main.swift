@@ -1,1 +1,1 @@
-Command.run()
+Command.main()
